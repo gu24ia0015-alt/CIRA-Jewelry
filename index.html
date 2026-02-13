@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIRA | Joyería Exclusiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">CIRA</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="cart-icon">
+                <button id="cart-btn">🛒 <span id="cart-count">0</span></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Elegancia Atemporal</h1>
+                <p>Piezas únicas diseñadas para brillar en tus mejores momentos.</p>
+                <a href="#catalogo" class="btn-main">Ver Colección</a>
+            </div>
+        </section>
+
+        <section id="catalogo">
+            <h2 class="section-title">Nuestra Colección</h2>
+            <div id="contenedor-joyas" class="productos-grid">
+                </div>
+        </section>
+
+        <section id="contacto" class="registro-section">
+            <h2>Únete al Club CIRA</h2>
+            <p>Recibe ofertas exclusivas y lanzamientos de nuevas colecciones.</p>
+            <form id="form-registro" class="registro-form">
+                <input type="text" id="nombre-usuario" placeholder="Tu nombre completo" required>
+                <input type="email" id="email-usuario" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn-submit">Suscribirme</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 CIRA Joyería. Creado por [Tu Nombre].</p>
+            <p>Proyecto Final de Programación Web.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
