@@ -1,0 +1,236 @@
+/* =========================================
+   1. VARIABLES Y CONFIGURACIÓN BASE
+   ========================================= */
+:root {
+    --oro: #D4AF37;           /* Color dorado premium */
+    --negro-fondo: #0a0a0a;   /* Negro profundo */
+    --negro-suave: #1c1c1c;   /* Para las tarjetas */
+    --blanco: #ffffff;
+    --gris-texto: #cccccc;
+    --fuente-titulo: 'Playfair Display', serif; /* Fuente elegante */
+    --fuente-texto: 'Poppins', sans-serif;      /* Fuente moderna */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--negro-fondo);
+    color: var(--blanco);
+    font-family: var(--fuente-texto);
+}
+
+/* =========================================
+   2. HEADER Y NAVEGACIÓN
+   ========================================= */
+header {
+    background-color: rgba(10, 10, 10, 0.95); /* Semitransparente */
+    padding: 1.5rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--fuente-titulo);
+    font-size: 2rem;
+    color: var(--oro);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 300;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--oro);
+}
+
+.cart-icon button {
+    background: transparent;
+    border: 1px solid var(--oro);
+    color: var(--oro);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cart-icon button:hover {
+    background: var(--oro);
+    color: var(--negro-fondo);
+}
+
+/* =========================================
+   3. SECCIÓN HERO (PORTADA)
+   ========================================= */
+.hero {
+    height: 70vh;
+    /* Imagen de fondo elegante oscura */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 4rem;
+    color: var(--oro);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--gris-texto);
+    margin-bottom: 2rem;
+}
+
+.btn-main {
+    padding: 12px 30px;
+    background-color: var(--oro);
+    color: var(--negro-fondo);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2px;
+    transition: transform 0.3s;
+}
+
+.btn-main:hover {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   4. CATÁLOGO (GRID)
+   ========================================= */
+#catalogo {
+    padding: 5rem 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-family: var(--fuente-titulo);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--oro);
+}
+
+/* Grid Responsivo: Se adapta a celular y PC */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Estilo de la Tarjeta del Producto */
+.card {
+    background-color: var(--negro-suave);
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15); /* Sombra dorada suave */
+    border-color: var(--oro);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Evita que la imagen se deforme */
+}
+
+.card-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-family: var(--fuente-titulo);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.precio {
+    color: var(--oro);
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.btn-agregar {
+    background-color: transparent;
+    border: 1px solid var(--blanco);
+    color: var(--blanco);
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn-agregar:hover {
+    background-color: var(--blanco);
+    color: var(--negro-fondo);
+}
+
+/* =========================================
+   5. FORMULARIO Y FOOTER
+   ========================================= */
+.registro-section {
+    background-color: var(--negro-suave);
+    padding: 4rem 10%;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.registro-form input {
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    background: transparent;
+    border: 1px solid #555;
+    color: var(--blanco);
+}
+
+.btn-submit {
+    padding: 10px 30px;
+    background-color: var(--oro);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 0.9rem;
+}
