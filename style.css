@@ -164,5 +164,41 @@ header {
 }
 
 
+.card-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-family: var(--fuente-titulo);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.precio {
+    color: var(--oro);
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.btn-agregar {
+    background-color: transparent;
+    border: 1px solid var(--blanco);
+    color: var(--blanco);
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn-agregar:hover {
+    background-color: var(--blanco);
+    color: var(--negro-fondo);
+}
+
+
+
 
 
