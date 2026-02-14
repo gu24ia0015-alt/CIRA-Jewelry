@@ -79,6 +79,8 @@ header {
     color: var(--negro-fondo);
 }
 
+
+
 /*  3. SECCIÓN HERO (PORTADA) */
 
 .hero {
@@ -113,8 +115,30 @@ header {
     font-weight: bold;
     border-radius: 2px;
     transition: transform 0.3s;
+ 
 }
 
 .btn-main:hover {
     transform: scale(1.05);
+}
+
+
+/* 4. CATÁLOGO (GRID) */
+
+#catalogo {
+    padding: 5rem 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-family: var(--fuente-titulo);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--oro);
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
