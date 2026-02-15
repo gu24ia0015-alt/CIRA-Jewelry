@@ -1,5 +1,5 @@
 
-// 1. BASE DE DATOS (Array de Objetos)// 
+// 1. BASE DE DATOS // 
 const productos = [
     // ANILLOS
     { id: 1, nombre: "Aura Solar", precio: 4500, categoria: "anillos", img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=500&q=60" },
@@ -22,3 +22,34 @@ const productos = [
     { id: 14, nombre: "Eslabón Cubano", precio: 2800, categoria: "pulseras", img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=500&q=60" },
     { id: 15, nombre: "Perlas de Río", precio: 3400, categoria: "pulseras", img: "https://images.unsplash.com/photo-1599643477877-53135375f97e?auto=format&fit=crop&w=500&q=60" }
 ];
+
+
+
+
+// 2. LÓGICA DE RENDERIZADO (DOM)//
+const contenedorJoyas = document.getElementById('contenedor-joyas');
+
+function cargarProductos() {
+    contenedorJoyas.innerHTML = ""; 
+    
+    productos.forEach(producto => {
+       
+        const tarjeta = document.createElement('div');
+        tarjeta.classList.add('card');
+        
+        
+        tarjeta.innerHTML = `
+            <img src="${producto.img}" alt="${producto.nombre}">
+            <div class="card-info">
+                <h3>${producto.nombre}</h3>
+                <span class="precio">$${producto.precio}</span>
+                <button class="btn-agregar" onclick="agregarAlCarrito('${producto.nombre}')">
+                    Agregar al Carrito
+                </button>
+            </div>
+        `;
+        
+        
+        contenedorJoyas.appendChild(tarjeta);
+    });
+}
