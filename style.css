@@ -200,5 +200,36 @@ header {
 
 
 
+/*5. FORMULARIO Y FOOTER */
+.registro-section {
+    background-color: var(--negro-suave);
+    padding: 4rem 10%;
+    text-align: center;
+    margin-top: 4rem;
+}
 
+.registro-form input {
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    background: transparent;
+    border: 1px solid #555;
+    color: var(--blanco);
+}
+
+.btn-submit {
+    padding: 10px 30px;
+    background-color: var(--oro);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 0.9rem;
+}
 
